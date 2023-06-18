@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "6be621d0-0e8f-4073-b460-5178d2cf1fb1",
+		"name": "soap API shatel mobile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14305244"
+	},
+	"item": [
+		{
+			"name": "get services",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tns=\"my_namespace\">\r\n    <soapenv:Body>\r\n        <tns:get_customer_services>\r\n            <tns:customer_id>3</tns:customer_id>\r\n        </tns:get_customer_services>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tns=\"my_namespace\">\r\n    <soapenv:Body>\r\n        <tns:create_service>\r\n            <tns:customer_id>3</tns:customer_id>\r\n            <tns:phone_number>1012554258</tns:phone_number>\r\n            <tns:service_name>silver</tns:service_name>\r\n        </tns:create_service>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tns=\"my_namespace\">\r\n    <soapenv:Body>\r\n        <tns:add_customer>\r\n            <tns:name>george</tns:name>\r\n            <tns:family>smit</tns:family>\r\n            <tns:father_name>asghar</tns:father_name>\r\n            <tns:national_id>12345678912</tns:national_id>\r\n            <tns:shenasname_id>123456</tns:shenasname_id>\r\n            <tns:birth_date>1000-01-01</tns:birth_date>\r\n            <tns:address>123 Man St</tns:address>\r\n        </tns:add_customer>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tns=\"my_namespace\">\r\n    <soapenv:Body>\r\n        <tns:get_customer>\r\n            <tns:customer_id>3</tns:customer_id>\r\n        </tns:get_customer>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
